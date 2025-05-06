@@ -1,0 +1,5 @@
+# Default Dependencies
+pydantic>=2.0.0  # For data validation
+PyPDF2
+openai>=1.0.0  # For AI service integration
+lancedb
