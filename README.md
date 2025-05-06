@@ -52,7 +52,12 @@ export OPENAI_API_KEY='your_openai_api_key'
 
 ## Usage
 
-The CLI provides several commands to interact with the RAG pipeline:
+The CLI provides several commands to interact with the RAG pipeline. By default, they will use the source/eval paths specified in `main.py`, but there are flags to override them.
+
+```python
+DEFAULT_SOURCE_PATH = "sample_data/source/"
+DEFAULT_EVAL_PATH = "sample_data/eval/sample_questions.json"
+```
 
 #### Run the Full Pipeline
 
@@ -75,7 +80,7 @@ python main.py reset
 Index and embed documents. You can specify a file or directory path.
 
 ```bash
-python main.py add sample_data/source/
+python main.py add -p "sample_data/source/"
 ```
 
 #### Query the Database
@@ -91,5 +96,5 @@ python main.py query "What is the opening year of The Lagoon Breeze Hotel?"
 Use a JSON file (with question/answer pairs) to evaluate the response quality.
 
 ```bash
-python main.py evaluate -f sample_data/eval/sample_questions.json
+python main.py evaluate -f "sample_data/eval/sample_questions.json"
 ```
