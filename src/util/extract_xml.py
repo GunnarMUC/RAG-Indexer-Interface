@@ -1,9 +1,11 @@
-import re
-
-
 def extract_xml_tag(content: str, tag: str) -> str:
-    pattern = re.compile(f"<{tag}>(.*?)</{tag}>", re.DOTALL | re.MULTILINE)
-    match = pattern.search(content.strip())
-    if match:
-        return match.group(1).strip()
-    return None
+    start_tag = f"<{tag}>"
+    end_tag = f"</{tag}>"
+    start_index = content.find(start_tag)
+    if start_index == -1:
+        return None
+    end_index = content.find(end_tag, start_index + len(start_tag))
+    if end_index == -1:
+        return None
+
+    return content[start_index + len(start_tag) : end_index].strip()

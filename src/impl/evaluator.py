@@ -39,7 +39,7 @@ class Evaluator(BaseEvaluator):
             is_correct = result.lower() == "true"
         else:
             is_correct = False
-            reasoning = "No result found"
+            reasoning = f"No result found: ({response_content})"
 
         return EvaluationResult(
             question=query,

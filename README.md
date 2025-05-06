@@ -44,10 +44,16 @@ pip install -r requirements.txt
 
 #### Configure Environment Variables
 
-Make sure to set your OpenAI API key. For example:
+We use OpenAI for the LLM (you can modify/replace it in `src/util/invoke_ai.py`). Make sure to set your OpenAI API key. For example:
 
-```bash
+```sh
 export OPENAI_API_KEY='your_openai_api_key'
+```
+
+You will also need a Cohere key for the re-ranking feature used in `src/impl/retriever.py`. You can create an account and create an API key at https://cohere.com/
+
+```sh
+set -x CO_API_KEY "xxx"
 ```
 
 ## Usage
