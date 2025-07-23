@@ -7,3 +7,4 @@ cohere==5.15.0
 python-dotenv>=1.0.0  # For loading environment variables
 anthropic>=0.58.0  # For Claude API integration
 sentence-transformers>=5.0.0  # For local embeddings
+flask>=3.0.0  # For web interface
