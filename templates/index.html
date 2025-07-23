@@ -210,8 +210,8 @@
                 const data = await response_data.json();
 
                 if (data.status === 'success') {
-                    questionDisplay.textContent = `Q: ${data.question}`;
-                    answerDisplay.textContent = data.answer;
+                    questionDisplay.textContent = `Q: ${question}`;
+                    answerDisplay.textContent = data.response;
                     response.className = 'response';
                 } else {
                     questionDisplay.textContent = 'Error';
