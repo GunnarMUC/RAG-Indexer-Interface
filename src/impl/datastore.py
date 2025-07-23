@@ -3,7 +3,7 @@ from interface.base_datastore import BaseDatastore, DataItem
 import lancedb
 from lancedb.table import Table
 import pyarrow as pa
-from openai import OpenAI
+from sentence_transformers import SentenceTransformer
 from concurrent.futures import ThreadPoolExecutor
 
 
@@ -13,8 +13,8 @@ class Datastore(BaseDatastore):
     DB_TABLE_NAME = "rag-table"
 
     def __init__(self):
-        self.vector_dimensions = 1536
-        self.open_ai_client = OpenAI()
+        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.vector_dimensions = self.embedding_model.get_sentence_embedding_dimension()
         self.vector_db = lancedb.connect(self.DB_PATH)
         self.table: Table = self._get_table()
 
@@ -40,13 +40,9 @@ class Datastore(BaseDatastore):
         return self.table
 
     def get_vector(self, content: str) -> List[float]:
-        response = self.open_ai_client.embeddings.create(
-            input=content,
-            model="text-embedding-3-small",
-            dimensions=self.vector_dimensions,
-        )
-        embeddings = response.data[0].embedding
-        return embeddings
+        # Use sentence-transformers for embeddings
+        embedding = self.embedding_model.encode(content)
+        return embedding.tolist()
 
     def add_items(self, items: List[DataItem]) -> None:
 

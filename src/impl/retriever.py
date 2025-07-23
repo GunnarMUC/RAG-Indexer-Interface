@@ -1,6 +1,7 @@
 from interface.base_datastore import BaseDatastore
 from interface.base_retriever import BaseRetriever
 import cohere
+import os
 
 
 class Retriever(BaseRetriever):
@@ -9,8 +10,15 @@ class Retriever(BaseRetriever):
 
     def search(self, query: str, top_k: int = 10) -> list[str]:
         search_results = self.datastore.search(query, top_k=top_k * 3)
-        reranked_results = self._rerank(query, search_results, top_k=top_k)
-        return reranked_results
+        
+        # Try to use Cohere reranking if API key is available
+        try:
+            reranked_results = self._rerank(query, search_results, top_k=top_k)
+            return reranked_results
+        except Exception as e:
+            print(f"⚠️  Cohere reranking failed: {e}")
+            print("📝 Using basic search results without reranking")
+            return search_results[:top_k]
 
     def _rerank(
         self, query: str, search_results: list[str], top_k: int = 10

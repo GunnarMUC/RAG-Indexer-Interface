@@ -1,18 +1,23 @@
-from openai import OpenAI
+from anthropic import Anthropic
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 def invoke_ai(system_message: str, user_message: str) -> str:
     """
-    Generic function to invoke an AI model given a system and user message.
+    Generic function to invoke Claude AI model given a system and user message.
     Replace this if you want to use a different AI model.
     """
 
-    client = OpenAI()  # Insert the API key here, or use env variable $OPENAI_API_KEY.
-    response = client.chat.completions.create(
-        model="o4-mini",
+    client = Anthropic()  # Uses environment variable $ANTHROPIC_API_KEY from .env file
+    response = client.messages.create(
+        model="claude-3-5-sonnet-20241022",
+        max_tokens=1000,
         messages=[
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": user_message},
+            {"role": "user", "content": f"{system_message}\n\n{user_message}"}
         ],
     )
-    return response.choices[0].message.content
+    return response.content[0].text
