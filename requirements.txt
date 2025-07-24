@@ -10,3 +10,4 @@ sentence-transformers>=5.0.0  # For local embeddings (upgraded for all-mpnet-bas
 flask>=3.0.0  # For web interface
 torch>=2.0.0  # Required for sentence-transformers
 transformers>=4.30.0  # Required for sentence-transformers
+watchdog>=3.0.0  # For file watching and auto-updates
