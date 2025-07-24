@@ -1,4 +1,4 @@
-# Simple RAG Pipeline
+<!-- # Simple RAG Pipeline -->
 
 A Retrieval Augmented Generation (RAG) system with Claude AI integration and local embeddings support. This project demonstrates how to build a complete RAG pipeline that can index documents, retrieve relevant content, generate AI-powered responses, and evaluate results—all through a command line interface (CLI).
 
@@ -19,6 +19,7 @@ The RAG Framework lets you:
 ## Key Features
 
 - **Claude AI Integration:** Uses Anthropic's Claude for text generation
+- **Smart Model Selection:** Automatically chooses between Claude Opus (thinking) and Claude Sonnet (programming) based on query type
 - **Local Embeddings:** Uses sentence-transformers for vector embeddings (no API costs)
 - **Graceful Fallbacks:** Handles missing API keys gracefully
 - **Modular Architecture:** Easy to extend and customize components
@@ -31,7 +32,7 @@ The RAG Framework lets you:
   - **Datastore:** Manages embeddings and vector storage using LanceDB.
   - **Indexer:** Processes documents and creates data chunks using the Docling package.
   - **Retriever:** Searches the datastore to pull relevant document segments with optional Cohere reranking.
-  - **ResponseGenerator:** Generates answers by calling the Claude AI service.
+  - **ResponseGenerator:** Generates answers by calling the Claude AI service with smart model selection (Opus for thinking, Sonnet for programming).
   - **Evaluator:** Compares the AI responses to expected answers and explains the outcome.
 
 - **Interfaces (interface/):**  
@@ -109,6 +110,32 @@ Use a JSON file (with question/answer pairs) to evaluate the response quality.
 ```bash
 PYTHONPATH=src python3 main.py evaluate -f "sample_data/eval/sample_questions.json"
 ```
+
+## Smart Model Selection
+
+The RAG pipeline automatically selects the most appropriate Claude model and prompt strategy based on the query type:
+
+### **🧠 Claude Sonnet (Thinking Tasks)**
+- **Use Case:** Complex analysis, reasoning, detailed explanations
+- **Triggers:** Keywords like "why", "how", "explain", "analyze", "compare", "evaluate"
+- **Cost:** $3/1M input, $15/1M output
+- **Example:** "Why did Goldlake View become a tourist destination? Explain the historical factors."
+
+### **💻 Claude Sonnet (Programming/General Tasks)**
+- **Use Case:** Programming, technical queries, general questions
+- **Triggers:** Keywords like "code", "function", "database", "implement", "technical"
+- **Cost:** $3/1M input, $15/1M output
+- **Example:** "How can I implement a search function?" or "What is the Golden Lake?"
+
+### **🤖 Testing Model Selection**
+
+Test the different models:
+
+```bash
+python3 test_models.py
+```
+
+This will demonstrate how different queries trigger different models and show cost comparisons.
 
 ## Dependencies
 
