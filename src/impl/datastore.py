@@ -78,7 +78,13 @@ class Datastore(BaseDatastore):
         try:
             return self.vector_db.open_table(self.DB_TABLE_NAME)
         except Exception as e:
-            print(f"Error opening table. Try resetting the datastore: {e}")
+            print(f"Error opening table. Resetting the datastore: {e}")
+            # Force recreate the database directory
+            import os
+            import shutil
+            if os.path.exists(self.DB_PATH):
+                shutil.rmtree(self.DB_PATH)
+            os.makedirs(self.DB_PATH, exist_ok=True)
             return self.reset()
 
     def _convert_item_to_entry(self, item: DataItem) -> dict:
