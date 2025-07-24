@@ -1,0 +1,681 @@
+2025-07-24 06:56:48,667 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 06:56:48,668 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 06:56:51,955 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 06:56:51,992 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 06:56:51,992 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 06:56:52,005 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 06:56:52,005 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 06:56:52,052 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 06:56:53,440 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 06:56:54,188 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 06:56:54,606 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 06:56:54,606 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 06:56:54,606 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 06:56:56,191 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.23 sec.
+2025-07-24 06:56:56,202 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 06:56:56,202 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 06:57:02,011 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.81 sec.
+2025-07-24 06:57:02,107 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 06:57:02,107 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 06:57:03,154 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.05 sec.
+2025-07-24 06:57:03,167 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 06:57:03,167 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 06:57:07,226 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 06:57:07,226 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 06:57:10,656 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 06:57:10,696 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 06:57:10,696 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 06:57:10,706 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 06:57:10,706 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 06:57:10,740 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 06:57:12,188 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 06:57:13,158 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 06:57:13,580 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 06:57:13,581 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 06:57:13,581 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 06:57:15,215 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.55 sec.
+2025-07-24 06:57:15,226 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 06:57:15,226 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 06:57:20,876 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.65 sec.
+2025-07-24 06:57:20,974 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 06:57:20,974 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 06:57:22,063 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.09 sec.
+2025-07-24 06:57:22,076 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 06:57:22,076 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:04:15,917 - __main__ - INFO - Processing question: whats the adress of the post...
+2025-07-24 07:04:16,599 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:04:16,600 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:04:16,654 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 63, in generate_response
+    return invoke_ai(system_message=SYSTEM_PROMPT, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 43, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 33, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:04:38,352 - __main__ - INFO - Processing question: name three attractions...
+2025-07-24 07:04:38,806 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:04:38,808 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:04:38,808 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 63, in generate_response
+    return invoke_ai(system_message=SYSTEM_PROMPT, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 43, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 33, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:05:41,150 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:05:41,151 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:05:44,383 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:05:44,432 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:05:44,433 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:05:44,444 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:05:44,445 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:05:44,478 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:05:45,883 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:05:47,037 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:05:47,367 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:05:47,367 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:05:47,367 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:05:48,808 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.42 sec.
+2025-07-24 07:05:48,819 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:05:48,819 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:05:54,528 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.71 sec.
+2025-07-24 07:05:54,623 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:05:54,623 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:05:55,695 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.07 sec.
+2025-07-24 07:05:55,708 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 07:05:55,709 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:05:58,768 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:05:58,768 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:06:01,528 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:06:01,576 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:06:01,576 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:06:01,587 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:06:01,587 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:06:01,620 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:06:03,071 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:06:03,838 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:06:04,299 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:06:04,299 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:06:04,300 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:06:05,814 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.28 sec.
+2025-07-24 07:06:05,825 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:06:05,825 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:06:11,507 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.68 sec.
+2025-07-24 07:06:11,602 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:06:11,602 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:06:12,682 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.08 sec.
+2025-07-24 07:06:12,695 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 07:06:12,695 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:07:06,612 - __main__ - INFO - Processing question: name three attractions...
+2025-07-24 07:07:07,214 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:07:07,214 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:07:07,250 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 63, in generate_response
+    return invoke_ai(system_message=SYSTEM_PROMPT, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 43, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 33, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:12:14,352 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:12:14,352 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:12:17,384 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:12:17,431 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:12:17,431 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:12:17,442 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:12:17,442 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:12:17,474 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:12:18,866 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:12:19,637 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:12:19,965 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:12:19,965 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:12:19,965 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:12:21,427 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.03 sec.
+2025-07-24 07:12:21,438 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:12:21,438 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:12:27,093 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.66 sec.
+2025-07-24 07:12:27,187 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:12:27,187 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:12:28,262 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.08 sec.
+2025-07-24 07:12:28,275 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 07:12:28,275 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:12:31,299 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:12:31,299 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:12:34,078 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:12:34,124 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:12:34,125 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:12:34,135 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:12:34,135 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:12:34,168 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:12:35,605 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:12:36,374 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:12:36,725 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:12:36,725 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:12:36,725 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:12:38,297 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.21 sec.
+2025-07-24 07:12:38,309 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:12:38,309 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:12:44,040 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.73 sec.
+2025-07-24 07:12:44,135 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:12:44,135 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:12:45,250 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.12 sec.
+2025-07-24 07:12:45,263 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 07:12:45,263 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:13:33,751 - __main__ - INFO - Processing question: Name three attractions...
+2025-07-24 07:13:34,445 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:13:34,446 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:13:34,485 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 63, in generate_response
+    return invoke_ai(system_message=SYSTEM_PROMPT, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 43, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 33, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:14:31,096 - __main__ - INFO - Processing question: name three attractions...
+2025-07-24 07:14:31,469 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:14:31,470 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:14:31,470 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 63, in generate_response
+    return invoke_ai(system_message=SYSTEM_PROMPT, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 43, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 33, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:17:44,235 - __main__ - INFO - Processing question: name three attractions...
+2025-07-24 07:17:44,671 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:17:44,673 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:17:44,674 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 63, in generate_response
+    return invoke_ai(system_message=SYSTEM_PROMPT, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 43, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 33, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:18:01,877 - __main__ - INFO - Processing question: when was the sity founded?...
+2025-07-24 07:18:02,359 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:18:02,360 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:18:02,361 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 63, in generate_response
+    return invoke_ai(system_message=SYSTEM_PROMPT, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 43, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 33, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:19:24,715 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:19:24,715 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:19:27,790 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:19:27,832 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:19:27,832 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:19:27,843 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:19:27,843 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:19:27,874 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:19:29,245 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:19:29,911 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:19:30,087 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:19:30,087 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:19:30,087 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:19:31,562 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 3.77 sec.
+2025-07-24 07:19:31,573 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:19:31,574 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:19:37,223 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.65 sec.
+2025-07-24 07:19:37,317 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:19:37,317 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:19:38,399 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.08 sec.
+2025-07-24 07:19:38,411 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 07:19:38,411 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:19:47,805 - __main__ - INFO - Processing question: test question...
+2025-07-24 07:19:48,354 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:19:48,355 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:19:48,404 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 60, in generate_response
+    return invoke_ai_programming(system_message=SYSTEM_PROMPT_PROGRAMMING, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 59, in invoke_ai_programming
+    return invoke_ai(system_message, user_message, ModelType.PROGRAMMING)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 45, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 35, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:20:16,153 - __main__ - INFO - Processing question: test question...
+2025-07-24 07:20:16,537 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2025-07-24 07:20:16,538 - __main__ - ERROR - Error processing question: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+2025-07-24 07:20:16,539 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 102, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 43, in process_query
+    response = self.response_generator.generate_response(query, search_results)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/response_generator.py", line 60, in generate_response
+    return invoke_ai_programming(system_message=SYSTEM_PROMPT_PROGRAMMING, user_message=user_message)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 59, in invoke_ai_programming
+    return invoke_ai(system_message, user_message, ModelType.PROGRAMMING)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 45, in invoke_ai
+    raise e
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/util/invoke_ai.py", line 35, in invoke_ai
+    response = client.messages.create(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_utils/_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/resources/messages/messages.py", line 997, in create
+    return self._post(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1321, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/anthropic/_base_client.py", line 1109, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}}
+
+2025-07-24 07:20:27,403 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:20:27,404 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:20:30,594 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:20:30,637 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:20:30,637 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:20:30,648 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:20:30,649 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:20:30,679 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:20:32,086 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:20:32,727 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:20:32,900 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:20:32,900 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:20:32,901 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:20:34,401 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 3.80 sec.
+2025-07-24 07:20:34,411 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:20:34,411 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:20:40,017 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.61 sec.
+2025-07-24 07:20:40,107 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:20:40,107 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:20:41,193 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.09 sec.
+2025-07-24 07:20:41,205 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 07:20:41,205 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:20:46,173 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:20:46,173 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:20:49,116 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:20:49,157 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:20:49,157 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:20:49,168 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:20:49,168 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:20:49,201 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:20:50,636 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:20:51,306 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:20:51,492 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:20:51,492 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:20:51,492 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:20:52,964 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 3.84 sec.
+2025-07-24 07:20:52,974 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:20:52,974 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:20:58,495 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.52 sec.
+2025-07-24 07:20:58,592 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:20:58,592 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:20:59,676 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.09 sec.
+2025-07-24 07:20:59,689 - docling.datamodel.document - ERROR - Input document sample_document.txt does not match any allowed format.
+2025-07-24 07:20:59,689 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:21:04,312 - __main__ - INFO - Processing question: test question...
+2025-07-24 07:21:06,685 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:21:06,688 - __main__ - INFO - Question processed successfully
+2025-07-24 07:23:01,129 - __main__ - INFO - Processing question: nenne drei attraktionen...
+2025-07-24 07:23:03,216 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:23:03,218 - __main__ - INFO - Question processed successfully
+2025-07-24 07:23:25,962 - __main__ - INFO - Processing question: wie lautet die adresse der post...
+2025-07-24 07:23:27,764 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:23:27,767 - __main__ - INFO - Question processed successfully
+2025-07-24 07:25:06,359 - __main__ - INFO - Processing question: nenne drei attraktionen...
+2025-07-24 07:25:08,559 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:25:08,562 - __main__ - INFO - Question processed successfully
+2025-07-24 07:25:33,809 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:25:33,809 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:25:36,750 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:25:36,781 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:25:36,781 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:25:36,791 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:25:36,791 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:25:36,822 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:25:38,230 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:25:38,981 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:25:39,571 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:25:39,571 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:25:39,571 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:25:41,185 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.43 sec.
+2025-07-24 07:25:41,196 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:25:41,196 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:25:47,054 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.86 sec.
+2025-07-24 07:25:47,153 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:25:47,153 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:25:48,242 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.09 sec.
+2025-07-24 07:25:55,112 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:25:55,112 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:25:57,742 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:25:57,758 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:25:57,758 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:25:57,767 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:25:57,767 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:25:57,789 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:25:59,231 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:26:00,178 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:26:00,371 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:26:00,371 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:26:00,371 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:26:01,972 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.23 sec.
+2025-07-24 07:26:01,984 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:26:01,984 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:26:08,373 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 6.39 sec.
+2025-07-24 07:26:08,472 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:26:08,472 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:26:09,639 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.17 sec.
+2025-07-24 07:26:40,187 - __main__ - INFO - Processing question: nenne drei attraktionen...
+2025-07-24 07:26:43,380 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:26:43,385 - __main__ - INFO - Question processed successfully
+2025-07-24 07:27:10,313 - __main__ - INFO - Processing question: nenne drei attraktionen...
+2025-07-24 07:27:14,004 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:27:14,007 - __main__ - INFO - Question processed successfully
+2025-07-24 07:27:31,787 - __main__ - INFO - Processing question: wann wurde die stadt gegründet?...
+2025-07-24 07:27:35,919 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:27:35,923 - __main__ - INFO - Question processed successfully
+2025-07-24 07:28:01,391 - __main__ - INFO - Processing question: in welchem jahr wurde diese stadt erstmals erwähnt?...
+2025-07-24 07:28:07,549 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:28:07,550 - __main__ - INFO - Question processed successfully
+2025-07-24 07:35:43,392 - __main__ - INFO - Processing uploaded file: receipt_R996657.5128.pdf
+2025-07-24 07:35:43,395 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:35:43,396 - docling.pipeline.base_pipeline - INFO - Processing document receipt_R996657.5128.pdf
+2025-07-24 07:35:44,191 - docling.document_converter - INFO - Finished converting document receipt_R996657.5128.pdf in 0.80 sec.
+2025-07-24 07:35:44,648 - __main__ - INFO - Document processed successfully
+2025-07-24 07:41:18,095 - __main__ - INFO - Processing question: How much Trinkgeld was given?...
+2025-07-24 07:41:27,309 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:41:27,311 - __main__ - INFO - Question processed successfully
+2025-07-24 07:44:25,115 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:44:25,115 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:44:28,123 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:44:28,168 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:44:28,168 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:44:28,179 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:44:28,179 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:44:28,214 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:44:29,587 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:44:30,351 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:44:30,672 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:44:30,672 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:44:30,672 - docling.pipeline.base_pipeline - INFO - Processing document Touristische Attraktionen - Goldlake View.pdf
+2025-07-24 07:44:32,281 - docling.document_converter - INFO - Finished converting document Touristische Attraktionen - Goldlake View.pdf in 4.15 sec.
+2025-07-24 07:44:32,293 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:44:32,293 - docling.pipeline.base_pipeline - INFO - Processing document Goldlake View - Wichtige Adressen & Einrichtungen.pdf
+2025-07-24 07:44:37,943 - docling.document_converter - INFO - Finished converting document Goldlake View - Wichtige Adressen & Einrichtungen.pdf in 5.65 sec.
+2025-07-24 07:44:38,035 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:44:38,035 - docling.pipeline.base_pipeline - INFO - Processing document Geschichte von Goldlake View.pdf
+2025-07-24 07:44:39,123 - docling.document_converter - INFO - Finished converting document Geschichte von Goldlake View.pdf in 1.09 sec.
+2025-07-24 07:45:02,431 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:45:02,431 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:45:05,203 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:45:27,232 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:45:27,232 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:45:30,285 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:45:57,085 - __main__ - INFO - Processing uploaded file: receipt_R996657.5128.pdf
+2025-07-24 07:45:57,127 - docling.document_converter - INFO - Going to convert document batch...
+2025-07-24 07:45:57,128 - docling.document_converter - INFO - Initializing pipeline for StandardPdfPipeline with options hash 70041f74270850b7bedf7c8f5c2dcede
+2025-07-24 07:45:57,139 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:45:57,140 - docling.models.factories - INFO - Registered ocr engines: ['easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-07-24 07:45:57,173 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:45:58,580 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:45:59,700 - docling.utils.accelerator_utils - INFO - Accelerator device: 'mps'
+2025-07-24 07:45:59,879 - docling.models.factories.base_factory - INFO - Loading plugin 'docling_defaults'
+2025-07-24 07:45:59,879 - docling.models.factories - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-07-24 07:45:59,879 - docling.pipeline.base_pipeline - INFO - Processing document receipt_R996657.5128.pdf
+2025-07-24 07:46:01,095 - docling.document_converter - INFO - Finished converting document receipt_R996657.5128.pdf in 4.01 sec.
+2025-07-24 07:46:01,169 - __main__ - INFO - Document processed successfully
+2025-07-24 07:46:24,925 - __main__ - INFO - Processing question: How much Trinkgeld was given?...
+2025-07-24 07:46:28,166 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:46:28,176 - __main__ - INFO - Question processed successfully
+2025-07-24 07:46:56,613 - __main__ - INFO - Processing question: can you find the term Trinkgeld in the documents?...
+2025-07-24 07:46:58,475 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:46:58,477 - __main__ - INFO - Question processed successfully
+2025-07-24 07:49:05,361 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:49:05,361 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:49:08,114 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:49:13,520 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:49:13,520 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:49:16,248 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:49:30,881 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:49:30,881 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:49:33,667 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:49:52,522 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:49:52,522 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:49:55,151 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:50:16,186 - __main__ - INFO - Processing question: How much Trinkgeld was given?...
+2025-07-24 07:50:19,053 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:50:19,058 - __main__ - INFO - Question processed successfully
+2025-07-24 07:50:42,976 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:50:42,976 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:50:45,691 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:51:13,962 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:51:13,962 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:51:16,833 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:51:30,152 - __main__ - INFO - Processing question: How much Trinkgeld was given?...
+2025-07-24 07:51:34,141 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:51:34,147 - __main__ - INFO - Question processed successfully
+2025-07-24 07:52:18,834 - __main__ - INFO - Processing question: How much trinkgeld was given?...
+2025-07-24 07:52:22,921 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:52:22,923 - __main__ - INFO - Question processed successfully
+2025-07-24 07:52:36,595 - __main__ - INFO - Processing question: Whats the companys name?...
+2025-07-24 07:52:41,517 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:52:41,520 - __main__ - INFO - Question processed successfully
+2025-07-24 07:53:03,325 - __main__ - INFO - Processing question: Whats the companys name on the receipt?...
+2025-07-24 07:53:07,327 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:53:07,329 - __main__ - INFO - Question processed successfully
+2025-07-24 07:54:13,926 - __main__ - INFO - Processing question: welches Getränk steht auf der Quittung?...
+2025-07-24 07:54:16,343 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:54:16,345 - __main__ - INFO - Question processed successfully
+2025-07-24 07:54:45,152 - __main__ - INFO - Processing question: Welches getränk steht auf der Rechnung...
+2025-07-24 07:54:50,251 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:54:50,253 - __main__ - INFO - Question processed successfully
+2025-07-24 07:55:08,537 - __main__ - INFO - Processing question: which drink is on the receipt?...
+2025-07-24 07:55:10,117 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 07:55:10,119 - __main__ - INFO - Question processed successfully
+2025-07-24 07:58:20,214 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:58:20,215 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:58:22,987 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:58:41,768 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:58:41,768 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:58:44,551 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:58:52,006 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:58:52,006 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:58:54,710 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:59:47,473 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:59:47,473 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:59:50,221 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 07:59:54,520 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 07:59:54,520 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 07:59:57,315 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 08:00:55,615 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 08:00:55,615 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 08:00:58,517 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 08:01:11,151 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 08:01:11,151 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 08:01:14,201 - __main__ - INFO - ✅ RAG Pipeline initialized successfully
+2025-07-24 08:01:20,637 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 08:01:20,637 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 08:01:23,370 - __main__ - INFO - ✅ RAG Pipeline initialized successfully with Enhanced Indexer
+2025-07-24 08:01:28,796 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 08:01:28,797 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 08:01:31,479 - __main__ - INFO - ✅ RAG Pipeline initialized successfully with Enhanced Indexer
+2025-07-24 08:01:48,245 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 08:01:48,245 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 08:01:51,161 - __main__ - INFO - ✅ RAG Pipeline initialized successfully with Enhanced Indexer
+2025-07-24 08:02:06,832 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/d5f7a5bd-8c5c-4445-ad88-bb522f1cc26f.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:02:36,834 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/d5f7a5bd-8c5c-4445-ad88-bb522f1cc26f.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:02:46,610 - __main__ - INFO - Processing question: What drink was ordered?...
+2025-07-24 08:02:46,727 - __main__ - ERROR - Error processing question: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/d5f7a5bd-8c5c-4445-ad88-bb522f1cc26f.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:02:46,738 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/app.py", line 99, in ask_question
+    response = pipeline.process_query(question, use_hybrid_search=True)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/rag_pipeline.py", line 39, in process_query
+    search_results = self.retriever.retrieve(
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/retriever.py", line 25, in retrieve
+    return self._hybrid_search(query, top_k)
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/retriever.py", line 35, in _hybrid_search
+    vector_results = self.datastore.search(query, top_k * 2)  # Get more for reranking
+  File "/Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/src/impl/datastore.py", line 73, in search
+    results = search_query.to_list()
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/query.py", line 740, in to_list
+    return self.to_arrow(timeout=timeout).to_pylist()
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/query.py", line 1209, in to_arrow
+    return self.to_batches(timeout=timeout).read_all()
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/query.py", line 1265, in to_batches
+    result_set = self._table._execute_query(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/table.py", line 2381, in _execute_query
+    async_iter = LOOP.run(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/background_loop.py", line 25, in run
+    return asyncio.run_coroutine_threadsafe(future, self.loop).result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 445, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/table.py", line 3512, in _execute_query
+    return await async_query.to_batches(
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/query.py", line 2785, in to_batches
+    results = pa.Table.from_batches(await reader.read_all(), reader.schema)
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/arrow.py", line 48, in read_all
+    return [batch async for batch in self]
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/arrow.py", line 48, in <listcomp>
+    return [batch async for batch in self]
+  File "/Users/ai_dev/Library/Python/3.9/lib/python/site-packages/lancedb/arrow.py", line 54, in __anext__
+    return await self._inner.__anext__()
+RuntimeError: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/d5f7a5bd-8c5c-4445-ad88-bb522f1cc26f.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+
+2025-07-24 08:03:03,978 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 08:03:03,978 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 08:03:06,629 - __main__ - INFO - ✅ RAG Pipeline initialized successfully with Enhanced Indexer
+2025-07-24 08:03:16,155 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 08:03:16,155 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 08:03:18,990 - __main__ - INFO - ✅ RAG Pipeline initialized successfully with Enhanced Indexer
+2025-07-24 08:03:21,885 - __main__ - INFO - Processing question: What drink was ordered?...
+2025-07-24 08:03:33,764 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 08:03:33,769 - __main__ - INFO - Question processed successfully
+2025-07-24 08:03:38,117 - __main__ - INFO - Processing question: Which beverage was purchased?...
+2025-07-24 08:03:40,166 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 08:03:40,167 - __main__ - INFO - Question processed successfully
+2025-07-24 08:03:46,066 - __main__ - INFO - Processing question: What dessert was ordered?...
+2025-07-24 08:04:01,140 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 08:04:01,143 - __main__ - INFO - Question processed successfully
+2025-07-24 08:04:34,989 - __main__ - INFO - Processing question: name three attractions in Goldlake view...
+2025-07-24 08:04:36,428 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 08:04:36,430 - __main__ - INFO - Question processed successfully
+2025-07-24 08:05:05,463 - __main__ - INFO - Processing question: on which date was the receipt generated and name the total price...
+2025-07-24 08:05:08,209 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-24 08:05:08,213 - __main__ - INFO - Question processed successfully
+2025-07-24 08:08:03,213 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-07-24 08:08:03,213 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-07-24 08:08:06,130 - __main__ - INFO - ✅ RAG Pipeline initialized successfully with Enhanced Indexer
+2025-07-24 08:08:22,726 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:08:52,729 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:09:22,726 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:09:52,730 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:10:22,862 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:10:52,859 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:11:28,859 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:11:52,729 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83
+2025-07-24 08:12:22,860 - __main__ - WARNING - Could not get sample content: lance error: LanceError(IO): Execution error: Not found: Users/ai_dev/ai_dateien/RAG-Indexer-Interface/RAG-Indexer-Interface/data/sample-lancedb/rag-table.lance/data/788783d1-dd0a-47d3-8b6e-3316f05da756.lance, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-io-0.26.0/src/local.rs:100:31, /Users/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lance-0.26.0/src/dataset/scanner.rs:2572:83

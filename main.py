@@ -13,13 +13,10 @@ DEFAULT_EVAL_PATH = "sample_data/eval/sample_questions.json"
 
 
 def create_pipeline() -> RAGPipeline:
-    """Create and return a new RAG Pipeline instance with all components."""
+    """Create and return a new RAG Pipeline instance with enhanced indexer."""
     datastore = Datastore()
-    indexer = Indexer()
-    retriever = Retriever(datastore=datastore)
-    response_generator = ResponseGenerator()
-    evaluator = Evaluator()
-    return RAGPipeline(datastore, indexer, retriever, response_generator, evaluator)
+    # Use enhanced indexer for better product recognition
+    return RAGPipeline(datastore)
 
 
 def main():

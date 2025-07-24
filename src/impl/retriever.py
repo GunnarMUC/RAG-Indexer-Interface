@@ -76,14 +76,36 @@ class Retriever(BaseRetriever):
         # Create a combined list with scores
         all_results = {}
         
+        # Extract query terms for relevance scoring
+        query_terms = self._extract_keywords(query)
+        query_lower = query.lower()
+        
         # Score vector results (higher weight)
         for i, result in enumerate(vector_results):
             score = len(vector_results) - i  # Higher score for earlier results
+            
+            # Boost score if result contains query terms
+            result_lower = result.lower()
+            term_matches = sum(1 for term in query_terms if term in result_lower)
+            if term_matches > 0:
+                score += term_matches * 10  # Significant boost for term matches
+            
+            # Extra boost for exact phrase matches
+            if query_lower in result_lower:
+                score += 20
+            
             all_results[result] = all_results.get(result, 0) + score * 2
         
         # Score keyword results
         for i, result in enumerate(keyword_results):
             score = len(keyword_results) - i
+            
+            # Boost score if result contains query terms
+            result_lower = result.lower()
+            term_matches = sum(1 for term in query_terms if term in result_lower)
+            if term_matches > 0:
+                score += term_matches * 10
+            
             all_results[result] = all_results.get(result, 0) + score
         
         # Sort by score and return top_k

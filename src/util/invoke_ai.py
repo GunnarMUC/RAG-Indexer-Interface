@@ -24,7 +24,17 @@ def invoke_ai(system_message: str, user_message: str, model_type: ModelType = Mo
     Returns:
         The AI's response as a string
     """
-    client = Anthropic()  # Uses environment variable $ANTHROPIC_API_KEY from .env file
+    # Force reload environment variables and clear any cached values
+    load_dotenv(override=True)
+    
+    # Get API key and verify it's loaded
+    api_key = os.getenv('ANTHROPIC_API_KEY')
+    if not api_key:
+        raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
+    
+    print(f"🔑 Using API key: {api_key[:20]}...")
+    
+    client = Anthropic(api_key=api_key)  # Explicitly pass the API key
     
     # Adjust max_tokens based on model type
     max_tokens = 2000 if model_type == ModelType.THINKING else 1000

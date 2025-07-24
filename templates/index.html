@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAG Pipeline - Ask Questions</title>
+    <title>RAG Indexer Interface - AI-Powered Document Search</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --background-light: #ffffff;
+            --background-dark: #1a1a1a;
+            --text-light: #333333;
+            --text-dark: #ffffff;
+            --border-light: #e1e5e9;
+            --border-dark: #404040;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+            --success-color: #10b981;
+            --error-color: #ef4444;
+            --warning-color: #f59e0b;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,90 +29,202 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
         }
 
         .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 800px;
-            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        h1 {
-            text-align: center;
-            color: #333;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 30px;
-            font-size: 2.5em;
-            font-weight: 300;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px var(--shadow-light);
         }
 
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-            font-size: 1.1em;
+        .dark-mode .header {
+            background: rgba(26, 26, 26, 0.95);
+            box-shadow: 0 8px 32px var(--shadow-dark);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+
+        .dark-mode .logo {
+            color: var(--text-dark);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--border-light);
+            border-radius: 50px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .dark-mode .theme-toggle {
+            border-color: var(--border-dark);
+            color: var(--text-dark);
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .chat-section, .upload-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px var(--shadow-light);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dark-mode .chat-section,
+        .dark-mode .upload-section {
+            background: rgba(26, 26, 26, 0.95);
+            box-shadow: 0 8px 32px var(--shadow-dark);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dark-mode .section-title {
+            color: var(--text-dark);
         }
 
         .input-group {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .question-input {
             width: 100%;
             padding: 15px 20px;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
+            border: 2px solid var(--border-light);
+            border-radius: 15px;
             font-size: 16px;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
             outline: none;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .dark-mode .question-input {
+            border-color: var(--border-dark);
+            background: rgba(26, 26, 26, 0.8);
+            color: var(--text-dark);
         }
 
         .question-input:focus {
-            border-color: #667eea;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
-        .ask-button {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+        .btn {
+            padding: 12px 24px;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s ease;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .ask-button:hover {
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
         }
 
-        .ask-button:disabled {
+        .btn-primary:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
         }
 
+        .btn-secondary {
+            background: rgba(102, 126, 234, 0.1);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .dark-mode .btn-secondary {
+            background: rgba(102, 126, 234, 0.2);
+            color: var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
         .loading {
             text-align: center;
-            color: #666;
+            color: var(--text-light);
             margin: 20px 0;
             display: none;
         }
 
+        .dark-mode .loading {
+            color: var(--text-dark);
+        }
+
         .spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #667eea;
+            border: 3px solid var(--border-light);
+            border-top: 3px solid var(--primary-color);
             border-radius: 50%;
             width: 30px;
             height: 30px;
@@ -108,70 +237,335 @@
             100% { transform: rotate(360deg); }
         }
 
-        .response {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            max-height: 400px;
         }
 
-        .question-display {
+        .message {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.question {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .message.answer {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success-color);
+        }
+
+        .message.error {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid var(--error-color);
+        }
+
+        .message-header {
             font-weight: 600;
-            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .message-content {
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+
+        .dark-mode .message-content {
+            color: var(--text-dark);
+        }
+
+        .file-upload-area {
+            border: 2px dashed var(--border-light);
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .dark-mode .file-upload-area {
+            border-color: var(--border-dark);
+        }
+
+        .file-upload-area:hover {
+            border-color: var(--primary-color);
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .file-upload-area.dragover {
+            border-color: var(--primary-color);
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
             margin-bottom: 15px;
         }
 
-        .answer-display {
-            color: #555;
-            line-height: 1.6;
+        .upload-text {
+            color: var(--text-light);
+            margin-bottom: 10px;
         }
 
-        .error {
-            background: #fee;
-            border-left-color: #e74c3c;
-            color: #c0392b;
+        .dark-mode .upload-text {
+            color: var(--text-dark);
+        }
+
+        .upload-hint {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .dark-mode .upload-hint {
+            color: #999;
+        }
+
+        .stats-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 8px 32px var(--shadow-light);
+        }
+
+        .dark-mode .stats-section {
+            background: rgba(26, 26, 26, 0.95);
+            box-shadow: 0 8px 32px var(--shadow-dark);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 12px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        .dark-mode .stat-label {
+            color: var(--text-dark);
         }
 
         .footer {
             text-align: center;
             margin-top: 30px;
-            color: #666;
-            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 15px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            border-left: 4px solid var(--success-color);
+            margin-bottom: 15px;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success-color);
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+            40% { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🤖 RAG Pipeline</h1>
-        <p class="subtitle">Ask questions about Goldlake View and get AI-powered answers</p>
-        
-        <div class="input-group">
-            <input type="text" id="questionInput" class="question-input" 
-                   placeholder="Ask a question about Goldlake View..." 
-                   onkeypress="handleKeyPress(event)">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                RAG Indexer Interface
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon" id="theme-icon"></i>
+                <span id="theme-text">Dark Mode</span>
+            </button>
         </div>
-        
-        <button onclick="askQuestion()" id="askButton" class="ask-button">
-            Ask Question
-        </button>
-        
-        <div id="loading" class="loading">
-            <div class="spinner"></div>
-            <p>Processing your question...</p>
+
+        <div class="main-content">
+            <div class="chat-section">
+                <div class="section-title">
+                    <i class="fas fa-comments"></i>
+                    Chat with AI
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="questionInput" class="question-input" 
+                           placeholder="Ask a question about your documents..." 
+                           onkeypress="handleKeyPress(event)">
+                </div>
+                
+                <button onclick="askQuestion()" id="askButton" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Ask Question
+                </button>
+                
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Processing your question...</p>
+                </div>
+
+                <div id="typingIndicator" class="typing-indicator">
+                    <div class="typing-dots">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px;">AI is thinking...</p>
+                </div>
+                
+                <div id="chatMessages" class="chat-messages"></div>
+            </div>
+
+            <div class="upload-section">
+                <div class="section-title">
+                    <i class="fas fa-upload"></i>
+                    Upload Documents
+                </div>
+                
+                <div class="file-upload-area" id="fileUploadArea" 
+                     ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">Drop files here or click to browse</div>
+                    <div class="upload-hint">Supports PDF, TXT, DOC, DOCX files</div>
+                </div>
+                
+                <input type="file" id="fileInput" style="display: none;" multiple 
+                       accept=".pdf,.txt,.doc,.docx" onchange="handleFileSelect(event)">
+                
+                <button onclick="uploadFiles()" id="uploadButton" class="btn btn-secondary" disabled>
+                    <i class="fas fa-upload"></i>
+                    Upload Documents
+                </button>
+                
+                <div id="uploadStatus"></div>
+            </div>
         </div>
-        
-        <div id="response" class="response" style="display: none;">
-            <div class="question-display" id="questionDisplay"></div>
-            <div class="answer-display" id="answerDisplay"></div>
+
+        <div class="stats-section">
+            <div class="section-title">
+                <i class="fas fa-chart-bar"></i>
+                System Statistics
+            </div>
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-item">
+                    <div class="stat-value" id="documentsCount">-</div>
+                    <div class="stat-label">Documents</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="pipelineStatus">-</div>
+                    <div class="stat-label">Pipeline Status</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="lastUpdate">-</div>
+                    <div class="stat-label">Last Update</div>
+                </div>
+            </div>
         </div>
-        
+
         <div class="footer">
-            Powered by Claude AI & Sentence Transformers
+            Powered by Claude AI & Sentence Transformers | Built with ❤️
         </div>
     </div>
 
     <script>
+        let selectedFiles = [];
+        let isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+        // Initialize theme
+        function initTheme() {
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+                document.getElementById('theme-text').textContent = 'Light Mode';
+            }
+        }
+
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle('dark-mode');
+            
+            const icon = document.getElementById('theme-icon');
+            const text = document.getElementById('theme-text');
+            
+            if (isDarkMode) {
+                icon.className = 'fas fa-sun';
+                text.textContent = 'Light Mode';
+            } else {
+                icon.className = 'fas fa-moon';
+                text.textContent = 'Dark Mode';
+            }
+            
+            localStorage.setItem('darkMode', isDarkMode);
+        }
+
         function handleKeyPress(event) {
             if (event.key === 'Enter') {
                 askQuestion();
@@ -182,24 +576,26 @@
             const questionInput = document.getElementById('questionInput');
             const askButton = document.getElementById('askButton');
             const loading = document.getElementById('loading');
-            const response = document.getElementById('response');
-            const questionDisplay = document.getElementById('questionDisplay');
-            const answerDisplay = document.getElementById('answerDisplay');
+            const typingIndicator = document.getElementById('typingIndicator');
+            const chatMessages = document.getElementById('chatMessages');
 
             const question = questionInput.value.trim();
             
             if (!question) {
-                alert('Please enter a question');
+                showNotification('Please enter a question', 'error');
                 return;
             }
 
-            // Show loading
+            // Show typing indicator
             askButton.disabled = true;
-            loading.style.display = 'block';
-            response.style.display = 'none';
+            loading.style.display = 'none';
+            typingIndicator.style.display = 'block';
+
+            // Add question to chat
+            addMessage('question', question);
 
             try {
-                const response_data = await fetch('/ask', {
+                const response = await fetch('/api/ask', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -207,31 +603,224 @@
                     body: JSON.stringify({ question: question })
                 });
 
-                const data = await response_data.json();
+                const data = await response.json();
 
                 if (data.status === 'success') {
-                    questionDisplay.textContent = `Q: ${question}`;
-                    answerDisplay.textContent = data.response;
-                    response.className = 'response';
+                    addMessage('answer', data.response);
                 } else {
-                    questionDisplay.textContent = 'Error';
-                    answerDisplay.textContent = data.error;
-                    response.className = 'response error';
+                    addMessage('error', data.error);
                 }
 
-                response.style.display = 'block';
                 questionInput.value = '';
 
             } catch (error) {
-                questionDisplay.textContent = 'Error';
-                answerDisplay.textContent = 'Failed to connect to the server. Please try again.';
-                response.className = 'response error';
-                response.style.display = 'block';
+                addMessage('error', 'Failed to connect to the server. Please try again.');
             } finally {
                 askButton.disabled = false;
                 loading.style.display = 'none';
+                typingIndicator.style.display = 'none';
             }
         }
+
+        function addMessage(type, content) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            const icon = type === 'question' ? 'fas fa-user' : 
+                        type === 'answer' ? 'fas fa-robot' : 'fas fa-exclamation-triangle';
+            const label = type === 'question' ? 'You' : 
+                         type === 'answer' ? 'AI Assistant' : 'Error';
+            
+            messageDiv.innerHTML = `
+                <div class="message-header">
+                    <i class="${icon}"></i>
+                    ${label}
+                </div>
+                <div class="message-content">${content}</div>
+            `;
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function handleFileSelect(event) {
+            selectedFiles = Array.from(event.target.files);
+            updateUploadButton();
+            console.log('Files selected:', selectedFiles.length);
+        }
+
+        function handleDrop(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const files = Array.from(event.dataTransfer.files);
+            selectedFiles = files;
+            updateUploadButton();
+            
+            // Remove dragover class
+            const uploadArea = document.getElementById('fileUploadArea');
+            if (uploadArea) {
+                uploadArea.classList.remove('dragover');
+            }
+            
+            console.log('Files dropped:', files.length);
+        }
+
+        function handleDragOver(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const uploadArea = document.getElementById('fileUploadArea');
+            if (uploadArea) {
+                uploadArea.classList.add('dragover');
+            }
+        }
+
+        function handleDragLeave(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const uploadArea = document.getElementById('fileUploadArea');
+            if (uploadArea) {
+                uploadArea.classList.remove('dragover');
+            }
+        }
+
+        function updateUploadButton() {
+            const uploadButton = document.getElementById('uploadButton');
+            const uploadStatus = document.getElementById('uploadStatus');
+            
+            if (selectedFiles.length > 0) {
+                uploadButton.disabled = false;
+                uploadButton.innerHTML = `<i class="fas fa-upload"></i> Upload ${selectedFiles.length} Document${selectedFiles.length > 1 ? 's' : ''}`;
+                
+                // Show selected files
+                const fileList = selectedFiles.map(file => file.name).join(', ');
+                if (uploadStatus) {
+                    uploadStatus.innerHTML = `<div style="margin-top: 10px; padding: 10px; background: rgba(102, 126, 234, 0.1); border-radius: 8px; font-size: 0.9em;">
+                        <strong>Selected files:</strong><br>${fileList}
+                    </div>`;
+                }
+            } else {
+                uploadButton.disabled = true;
+                uploadButton.innerHTML = '<i class="fas fa-upload"></i> Upload Documents';
+                if (uploadStatus) {
+                    uploadStatus.innerHTML = '';
+                }
+            }
+        }
+
+        async function uploadFiles() {
+            if (selectedFiles.length === 0) return;
+
+            const uploadButton = document.getElementById('uploadButton');
+            const uploadStatus = document.getElementById('uploadStatus');
+            
+            uploadButton.disabled = true;
+            uploadButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uploading...';
+
+            let successCount = 0;
+            let errorCount = 0;
+
+            for (const file of selectedFiles) {
+                const formData = new FormData();
+                formData.append('file', file);
+
+                try {
+                    console.log('Uploading file:', file.name);
+                    const response = await fetch('/api/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const data = await response.json();
+
+                    if (data.status === 'success') {
+                        showNotification(`"${file.name}" uploaded successfully`, 'success');
+                        successCount++;
+                    } else {
+                        showNotification(`Failed to upload "${file.name}": ${data.error}`, 'error');
+                        errorCount++;
+                    }
+                } catch (error) {
+                    console.error('Upload error:', error);
+                    showNotification(`Failed to upload "${file.name}"`, 'error');
+                    errorCount++;
+                }
+            }
+
+            // Show summary
+            if (successCount > 0) {
+                showNotification(`${successCount} file(s) uploaded successfully!`, 'success');
+            }
+            if (errorCount > 0) {
+                showNotification(`${errorCount} file(s) failed to upload.`, 'error');
+            }
+
+            uploadButton.disabled = false;
+            uploadButton.innerHTML = '<i class="fas fa-upload"></i> Upload Documents';
+            selectedFiles = [];
+            updateUploadButton();
+            loadStats();
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 10px;
+                color: white;
+                font-weight: 600;
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+                background: ${type === 'success' ? 'var(--success-color)' : 
+                           type === 'error' ? 'var(--error-color)' : 'var(--warning-color)'};
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/stats');
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    document.getElementById('documentsCount').textContent = data.documents_processed || 0;
+                    document.getElementById('pipelineStatus').textContent = data.pipeline_ready ? 'Ready' : 'Error';
+                    document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString();
+                }
+            } catch (error) {
+                console.error('Failed to load stats:', error);
+            }
+        }
+
+        // Initialize
+        initTheme();
+        loadStats();
+        setInterval(loadStats, 30000); // Update stats every 30 seconds
+        
+        // Add click event listener for file upload area
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileUploadArea = document.getElementById('fileUploadArea');
+            const fileInput = document.getElementById('fileInput');
+            
+            if (fileUploadArea && fileInput) {
+                fileUploadArea.addEventListener('click', function() {
+                    fileInput.click();
+                });
+            }
+        });
     </script>
 </body>
 </html> 
