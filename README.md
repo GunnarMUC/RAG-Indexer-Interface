@@ -1,4 +1,6 @@
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue)](LICENSE)n
+[![CI](https://github.com/GunnarMUC/RAG-Indexer-Interface/actions/workflows/ci.yml/badge.svg)](https://github.com/GunnarMUC/RAG-Indexer-Interface/actions)
 
 # 🤖 RAG Indexer Interface
 
@@ -280,7 +282,7 @@ PYTHONPATH=src python3 main.py evaluate -f "sample_data/eval/sample_questions.js
 
 ## 📄 **License**
 
-This project is licensed under the MIT License.
+This project is licensed under the Apache 2.0.
 
 ## 🙏 **Acknowledgments**
 
