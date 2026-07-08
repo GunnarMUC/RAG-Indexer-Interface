@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue)](LICENSE)n
+
 # 🤖 RAG Indexer Interface
 
 A modern, feature-rich Retrieval Augmented Generation (RAG) system with Claude AI integration, local embeddings support, and a beautiful web interface. This project demonstrates how to build a complete RAG pipeline that can index documents, retrieve relevant content, generate AI-powered responses, and evaluate results.
